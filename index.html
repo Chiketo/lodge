@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Creek Lodge</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🌿</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/location.js"></script>
+</head>
+<body>
+    <!-- LOCATION SELECTOR -->
+    <div class="location-selector">
+        <div class="container">
+            <h3>Select Your Preferred Location:</h3>
+            <div class="location-buttons">
+                <button class="location-btn active" data-location="chikanga" onclick="setCurrentLodge('chikanga')">🏠 Chikanga</button>
+                <button class="location-btn" data-location="vhumba" onclick="setCurrentLodge('vhumba')">🏠 Vhumba</button>
+                <button class="location-btn" data-location="dangamvura" onclick="setCurrentLodge('dangamvura')">🏠 Dangamvura</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Forest Creek Lodge</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to <span data-lodge="name">Forest Creek Chikanga</span></h1>
+            <p>Your serene escape in <span data-lodge="area">Chikanga</span>, Mutare, Zimbabwe</p>
+            <a href="booking.html" class="btn btn-primary">Book Your Stay</a>
+            <a href="rooms.html" class="btn btn-secondary">Explore Rooms</a>
+        </div>
+    </section>
+
+    <!-- FEATURED ROOMS SECTION -->
+    <section class="container" style="padding: 4rem 0;">
+        <h2 class="section-title">Featured Accommodations</h2>
+        <div class="rooms-grid">
+            <!-- Deluxe Suite -->
+            <div class="card">
+                <div class="card-image">🛏️</div>
+                <div class="card-body">
+                    <h3 class="card-title">Deluxe Suite</h3>
+                    <p class="card-text">Experience luxury with premium furnishings and scenic forest views.</p>
+                    <div class="card-price">$150 / night</div>
+                    <ul class="room-features">
+                        <li>King-size bed</li>
+                        <li>Free WiFi</li>
+                        <li>Private balcony</li>
+                        <li>Air conditioning</li>
+                    </ul>
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Standard Room -->
+            <div class="card">
+                <div class="card-image">🏠</div>
+                <div class="card-body">
+                    <h3 class="card-title">Standard Room</h3>
+                    <p class="card-text">Comfortable and affordable accommodation for the budget-conscious traveler.</p>
+                    <div class="card-price">$75 / night</div>
+                    <ul class="room-features">
+                        <li>Double bed</li>
+                        <li>Ensuite bathroom</li>
+                        <li>Air conditioning</li>
+                        <li>Cable TV</li>
+                    </ul>
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Family Cottage -->
+            <div class="card">
+                <div class="card-image">👨‍👩‍👧‍👦</div>
+                <div class="card-body">
+                    <h3 class="card-title">Family Cottage</h3>
+                    <p class="card-text">Perfect for families with spacious rooms and family-friendly amenities.</p>
+                    <div class="card-price">$200 / night</div>
+                    <ul class="room-features">
+                        <li>2 bedrooms</li>
+                        <li>Living area</li>
+                        <li>Full kitchen</li>
+                        <li>Outdoor patio</li>
+                    </ul>
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section style="background-color: #f0f7f0; padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title">Why Choose Forest Creek Lodge</h2>
+            <div class="rooms-grid">
+                <div class="card">
+                    <div class="card-image">🌿</div>
+                    <div class="card-body">
+                        <h3 class="card-title">Nature Experience</h3>
+                        <p class="card-text">Surrounded by lush greenery and natural beauty in the heart of Mutare's finest landscape.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">⭐</div>
+                    <div class="card-body">
+                        <h3 class="card-title">Premium Service</h3>
+                        <p class="card-text">Our friendly and professional staff ensures your comfort and satisfaction throughout your stay.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">🍽️</div>
+                    <div class="card-body">
+                        <h3 class="card-title">Fine Dining</h3>
+                        <p class="card-text">Enjoy delicious meals prepared by our talented chefs using fresh, local ingredients.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">🎯</div>
+                    <div class="card-body">
+                        <h3 class="card-title">Best Value</h3>
+                        <p class="card-text">Competitive pricing with unmatched quality and comfort for an unforgettable experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="hero" style="padding: 3rem 0;">
+        <div class="container">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Ready to Book Your Perfect Getaway?</h2>
+            <a href="booking.html" class="btn btn-primary">Reserve Your Room Now</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Forest Creek Lodge is your premier destination for relaxation and adventure in Mutare, Zimbabwe. We provide world-class hospitality and unforgettable experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 Mutare, Zimbabwe</p>
+                    <p>📞 +263 123 456 789</p>
+                    <p>📧 info@forestcreeklodge.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">Instagram</a></p>
+                    <p><a href="#">Twitter</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Forest Creek Lodge. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay - Forest Creek Lodge</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🌿</text></svg>">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Forest Creek Lodge</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="hero" style="padding: 3rem 0;">
+        <div class="container">
+            <h1>Book Your Stay</h1>
+            <p>Reserve your room at Forest Creek Lodge</p>
+        </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section class="container" style="padding: 4rem 0;">
+        <div class="booking-form">
+            <h2 style="color: #2d5016; margin-bottom: 2rem; text-align: center;">Booking Details</h2>
+            
+            <form action="#" method="POST">
+                <!-- Guest Information -->
+                <h3 style="color: #5a7c3e; margin-top: 1.5rem; margin-bottom: 1rem; border-bottom: 2px solid #9caf88; padding-bottom: 0.5rem;">Guest Information</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+
+                <!-- Booking Details -->
+                <h3 style="color: #5a7c3e; margin-top: 1.5rem; margin-bottom: 1rem; border-bottom: 2px solid #9caf88; padding-bottom: 0.5rem;">Booking Details</h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkIn">Check-in Date *</label>
+                        <input type="date" id="checkIn" name="checkIn" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkOut">Check-out Date *</label>
+                        <input type="date" id="checkOut" name="checkOut" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="roomType">Room Type *</label>
+                        <select id="roomType" name="roomType" required>
+                            <option value="">-- Select a room type --</option>
+                            <option value="deluxe">Deluxe Suite ($150/night)</option>
+                            <option value="standard">Standard Room ($75/night)</option>
+                            <option value="family">Family Cottage ($200/night)</option>
+                            <option value="studio">Studio Apartment ($100/night)</option>
+                            <option value="honeymoon">Honeymoon Suite ($180/night)</option>
+                            <option value="budget">Budget Room ($50/night)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">-- Select number of guests --</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6plus">6+ Guests</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rooms">Number of Rooms *</label>
+                        <input type="number" id="rooms" name="rooms" min="1" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bedType">Preferred Bed Type *</label>
+                        <select id="bedType" name="bedType" required>
+                            <option value="">-- Select bed type --</option>
+                            <option value="king">King Size</option>
+                            <option value="double">Double</option>
+                            <option value="twin">Twin</option>
+                            <option value="queen">Queen Size</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Special Requests -->
+                <h3 style="color: #5a7c3e; margin-top: 1.5rem; margin-bottom: 1rem; border-bottom: 2px solid #9caf88; padding-bottom: 0.5rem;">Additional Information</h3>
+
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests or Preferences</label>
+                    <textarea id="specialRequests" name="specialRequests" placeholder="Any special requests? Anniversaries, dietary requirements, accessibility needs, etc."></textarea>
+                </div>
+
+                <!-- Additional Services -->
+                <div class="form-group" style="margin-bottom: 2rem;">
+                    <label style="font-weight: 600; margin-bottom: 1rem; display: block;">Additional Services (Optional)</label>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <label style="font-weight: normal; display: flex; align-items: center;">
+                            <input type="checkbox" name="breakfast" style="width: auto; margin-right: 0.5rem;">
+                            Continental Breakfast (+$15/person/night)
+                        </label>
+                        <label style="font-weight: normal; display: flex; align-items: center;">
+                            <input type="checkbox" name="spa" style="width: auto; margin-right: 0.5rem;">
+                            Spa Services (From $30)
+                        </label>
+                        <label style="font-weight: normal; display: flex; align-items: center;">
+                            <input type="checkbox" name="airport" style="width: auto; margin-right: 0.5rem;">
+                            Airport Transfer (+$25)
+                        </label>
+                        <label style="font-weight: normal; display: flex; align-items: center;">
+                            <input type="checkbox" name="dinner" style="width: auto; margin-right: 0.5rem;">
+                            Dinner Reservation (+$40/person)
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Terms & Payment -->
+                <h3 style="color: #5a7c3e; margin-top: 1.5rem; margin-bottom: 1rem; border-bottom: 2px solid #9caf88; padding-bottom: 0.5rem;">Terms & Payment</h3>
+
+                <div class="form-group">
+                    <label style="font-weight: normal; display: flex; align-items: flex-start;">
+                        <input type="checkbox" name="terms" required style="width: auto; margin-right: 0.5rem; margin-top: 0.3rem;">
+                        <span>I agree to the cancellation policy and terms of service. Cancellations must be made 7 days before check-in for a full refund.</span>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="paymentMethod">Preferred Payment Method *</label>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="">-- Select payment method --</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="debit">Debit Card</option>
+                        <option value="bank">Bank Transfer</option>
+                        <option value="mobile">Mobile Money</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem; margin-top: 1.5rem;">
+                    Complete Booking
+                </button>
+
+                <p style="text-align: center; margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                    * Required fields. We'll send you a confirmation email shortly after booking.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- BOOKING INFO SECTION -->
+    <section style="background-color: #f0f7f0; padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title">Booking Information</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <h3 style="color: #2d5016; margin-bottom: 1rem;">✓ Cancellation Policy</h3>
+                    <p>Free cancellation up to 7 days before check-in. Cancellations within 7 days may incur charges equal to one night's accommodation.</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <h3 style="color: #2d5016; margin-bottom: 1rem;">✓ Check-in & Check-out</h3>
+                    <p>Check-in: 2:00 PM | Check-out: 10:00 AM. Early check-in and late check-out available upon request (subject to availability).</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <h3 style="color: #2d5016; margin-bottom: 1rem;">✓ Payment Security</h3>
+                    <p>Your payment information is encrypted and secure. We accept all major credit cards, debit cards, bank transfers, and mobile money.</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <h3 style="color: #2d5016; margin-bottom: 1rem;">✓ Confirmation</h3>
+                    <p>You'll receive a booking confirmation email with your reservation details and booking reference number within 1 hour.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Forest Creek Lodge is your premier destination for relaxation and adventure in Mutare, Zimbabwe. We provide world-class hospitality and unforgettable experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 Mutare, Zimbabwe</p>
+                    <p>📞 +263 123 456 789</p>
+                    <p>📧 info@forestcreeklodge.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">Instagram</a></p>
+                    <p><a href="#">Twitter</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Forest Creek Lodge. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
